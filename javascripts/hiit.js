@@ -5,6 +5,7 @@ function scheduleSpeak(time, text) {
     setTimeout(function () {
         var msg = new SpeechSynthesisUtterance(text);
         window.speechSynthesis.speak(msg);
+        document.getElementById('main-section').innerHTML = ("<H1>" + text + "</H1>");
     },
                time);
 }
